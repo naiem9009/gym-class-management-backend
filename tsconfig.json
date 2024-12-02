@@ -1,16 +1,22 @@
 {
     "compilerOptions": {
-        "target": "ES6",
-        "module": "commonjs",
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "outDir": "./dist", 
-        "rootDir": "./",
-        "strict": true,
-        "resolveJsonModule": true
+      "target": "ES6",
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "outDir": "./dist", 
+      "rootDir": "./src",
+      "strict": true,
+      "resolveJsonModule": true
     },
-    
-    "include": ["**/*.ts", "**/*.tsx"], 
-    "exclude": ["node_modules", "dist"] 
-}
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx"
+    ], 
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
+  }
+  
