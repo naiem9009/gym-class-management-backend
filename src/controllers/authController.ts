@@ -79,7 +79,7 @@ class AuthController {
             res.cookie('token', token, {
                 httpOnly: true, 
                 secure: process.env.NODE_ENV === 'production',
-                sameSite: 'lax',
+                sameSite: 'strict',
                 maxAge: 3600000 
             });
 
