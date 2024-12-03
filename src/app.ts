@@ -3,7 +3,7 @@ import express, { Request, Response } from 'express';
 const app = express();
 
 import morgan from "morgan"
-import cors from "cors"
+import cors, { CorsOptions } from "cors"
 
 // routes imports
 import authRoutes from './routes/authRoutes';
@@ -13,15 +13,18 @@ import trainerRoutes from './routes/trainerRoute';
 
 
 
-
-
-
 // middlewares
+const corsOptions: CorsOptions = {
+    origin: (origin, callback) => {
+        if (!origin || true) {
+            callback(null, origin);
+        }
+    },
+    credentials: true, 
+};
+  
+app.use(cors(corsOptions));
 app.use(morgan("dev"))
-app.use(cors({
-    origin : '*',
-    credentials : true
-}));
 app.use(express.json())
 app.use(express.urlencoded({extended : false}))
 
