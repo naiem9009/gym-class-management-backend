@@ -19,8 +19,8 @@ import trainerRoutes from './routes/trainerRoute';
 // middlewares
 app.use(morgan("dev"))
 app.use(cors({
-    origin: 'https://gym-class-management.vercel.app',
-    credentials: true,
+    origin : '*',
+    credentials : true
 }));
 app.use(express.json())
 app.use(express.urlencoded({extended : false}))

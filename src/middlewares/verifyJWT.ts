@@ -1,14 +1,9 @@
 import { Request, Response, NextFunction } from 'express';
-import jwt, { JwtPayload } from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
 import { IUser } from '../models/User';
-import mongoose from 'mongoose';
 
 
 export type RequestWithUser<T = {}> = Request & T;
-
-interface JWTPlayLoadType extends JwtPayload {
-    userId: mongoose.Types.ObjectId
-}
 
 
 

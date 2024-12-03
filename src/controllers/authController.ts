@@ -76,13 +76,6 @@ class AuthController {
                 role: user.role 
             }, process.env.JWT_SECRET!, { expiresIn: '1h' });
 
-            res.cookie('token', token, {
-                httpOnly: true, 
-                secure: true, 
-                sameSite: 'none',
-                maxAge: 3600000 
-            });
-
             res.json({ 
                 success: true, 
                 token,
