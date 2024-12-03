@@ -81,6 +81,7 @@ class AuthController {
                 maxAge: 90000,
                 path: '/',
                 secure: true,
+                sameSite: "none"
             })
 
             res.json({ 
